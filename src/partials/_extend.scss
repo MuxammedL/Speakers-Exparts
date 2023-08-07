@@ -1,0 +1,57 @@
+.btn{
+    background-color: $yellow;
+    display: inline-block;
+    font-weight: 700;
+    padding: 18px 44px;
+    font-size: 12px;
+    letter-spacing: 2px;
+    color: $light_black;
+    border-radius: 0;
+    border: 0;
+    position: relative;
+    overflow: hidden;
+    &:hover{
+        .btn-animation{
+            span{
+                &:first-child{
+                    transform: translateY(-150%);
+                }
+                &:last-child{
+                    top: 50%;
+                    transform: translateY(-50%);
+                }
+            }
+            &:before{
+                top: -50%;
+            }
+        }
+    }
+    .btn-animation{
+        span{
+            display: block;
+            font-size: 12px;
+            position: relative;
+            font-weight: 700;
+            letter-spacing: 2px;
+            color: $light_black;
+            transition: all 0.6s ease;
+            &:last-child{
+                color: #fff;
+                position: absolute;
+                top: 100%;
+            }
+        }
+        &:before{
+            position: absolute;
+            content: "View Speakers";
+            width: 200%;
+            height: 200%;
+            background-color: $light_black;
+            top: -200%;
+            left: 50%;
+            transform: translateX(-50%);
+            border-radius: 50%;
+            transition: all 0.8s ease;
+        }
+    }
+}
